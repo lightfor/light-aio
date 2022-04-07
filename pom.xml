@@ -13,9 +13,109 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- core start !-->
+        <slf4j-api.version>1.7.36</slf4j-api.version>
+        <!-- core end !-->
+
+        <fastjson.version>1.2.80</fastjson.version>
+        <poi.version>5.2.2</poi.version>
+
+        <!-- provided start -->
+        <servlet-api.version>2.5</servlet-api.version>
+        <jsp-api.version>2.2</jsp-api.version>
+        <!-- provided end -->
+
+        <!-- test start -->
+        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
+        <logback.version>1.2.11</logback.version>
+        <junit.version>4.11</junit.version>
+        <!-- test end -->
+
     </properties>
 
     <dependencies>
+
+        <!-- core start !-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.monitorjbl</groupId>
+            <artifactId>xlsx-streamer</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <!-- core end !-->
+
+
+        <!-- provided start -->
+        <!--servlet/jsp api start-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--servlet/jsp api end-->
+
+
+        <!-- provided end -->
+
+        <!-- test start -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.14</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- test end -->
 
         <dependency>
             <groupId>org.jsoup</groupId>
